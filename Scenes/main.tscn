@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b1lcsr33wt0r0"]
+
+[ext_resource type="PackedScene" uid="uid://cv5pif1m8ltdg" path="res://Scenes/rhythm_node.tscn" id="1_jjgbg"]
+
+[node name="Main" type="Node2D" unique_id=1135861443]
+
+[node name="RhythmNode" parent="." unique_id=986718057 instance=ExtResource("1_jjgbg")]

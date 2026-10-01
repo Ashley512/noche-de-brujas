@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cv5pif1m8ltdg"]
+
+[ext_resource type="Script" uid="uid://qo1eoq35aml7" path="res://Scenes/rhythm_node.gd" id="1_243ms"]
+
+[node name="RhythmNode" type="AudioStreamPlayer2D" unique_id=986718057]
+script = ExtResource("1_243ms")
+
+[node name="InputNode" type="Sprite2D" parent="." unique_id=939371095]
+
+[node name="TempoTimer" type="Timer" parent="." unique_id=1384828039]
+wait_time = 0.5
+autostart = true
+
+[node name="InputSpawns" type="Node2D" parent="." unique_id=991205742]
+
+[node name="InputSpaw" type="Sprite2D" parent="InputSpawns" unique_id=963844609]
+
+[connection signal="timeout" from="TempoTimer" to="." method="_on_tempo_timer_timeout"]
