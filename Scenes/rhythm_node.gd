@@ -22,3 +22,7 @@ func _on_tempo_timer_timeout() -> void:
 	for n : input_spawner in $InputSpawns.get_children():
 		if (randf() < 0.5):
 			n.spawn_input()
+
+
+func _on_destroyer_area_body_entered(body: Node2D) -> void:
+	body.queue_free()

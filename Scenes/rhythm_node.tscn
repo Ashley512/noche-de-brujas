@@ -3,12 +3,16 @@
 [ext_resource type="Script" uid="uid://qo1eoq35aml7" path="res://Scenes/rhythm_node.gd" id="1_243ms"]
 [ext_resource type="PackedScene" uid="uid://blswfxcqpnf7t" path="res://Scenes/InputSpawner.tscn" id="2_ky7fm"]
 [ext_resource type="Script" uid="uid://0t326gomyeba" path="res://Scripts/song.gd" id="2_n4grw"]
+[ext_resource type="Texture2D" uid="uid://bltrn314b7ccf" path="res://icon.svg" id="4_u6ge3"]
 
 [sub_resource type="Resource" id="Resource_ky7fm"]
 script = ExtResource("2_n4grw")
 beats_per_second = 60
 song_beats = Array[int]([0])
 metadata/_custom_type_script = "uid://0t326gomyeba"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqtis"]
+size = Vector2(1029, 110)
 
 [node name="RhythmNode" type="AudioStreamPlayer2D" unique_id=986718057]
 script = ExtResource("1_243ms")
@@ -21,23 +25,52 @@ wait_time = 0.5
 autostart = true
 
 [node name="InputSpawns" type="Node2D" parent="." unique_id=991205742]
-position = Vector2(0, -200)
+position = Vector2(0, -275)
+scale = Vector2(2, 2)
 
 [node name="UpSpawner" parent="InputSpawns" unique_id=1071283595 instance=ExtResource("2_ky7fm")]
-position = Vector2(-300, 0)
+position = Vector2(-75, 0)
+rotation = 4.712389
 
 [node name="DownSpawner" parent="InputSpawns" unique_id=1251694878 instance=ExtResource("2_ky7fm")]
-position = Vector2(-100, 0)
+position = Vector2(-25, 0)
+rotation = 1.5707964
 input_type = 1
 
 [node name="LeftSpawner" parent="InputSpawns" unique_id=1084566114 instance=ExtResource("2_ky7fm")]
-position = Vector2(100, 0)
+position = Vector2(25, 0)
+rotation = 3.1415927
 input_type = 2
 
 [node name="RightSpawner" parent="InputSpawns" unique_id=1484060667 instance=ExtResource("2_ky7fm")]
-position = Vector2(300, 0)
+position = Vector2(75, 0)
 input_type = 3
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=598199532]
 
+[node name="DestroyerArea" type="Area2D" parent="." unique_id=2119777589]
+position = Vector2(0, 397.345)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DestroyerArea" unique_id=701791237]
+position = Vector2(-1, -315.345)
+shape = SubResource("RectangleShape2D_kqtis")
+
+[node name="Sprite2D" type="Sprite2D" parent="DestroyerArea" unique_id=2012724745]
+position = Vector2(0, -318.345)
+scale = Vector2(8.015625, 0.85937494)
+texture = ExtResource("4_u6ge3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=208446279]
+position = Vector2(0, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1413737710]
+position = Vector2(-7, 2)
+shape = SubResource("RectangleShape2D_kqtis")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1858281241]
+position = Vector2(-6, 0)
+scale = Vector2(8.015625, 0.85937494)
+texture = ExtResource("4_u6ge3")
+
 [connection signal="timeout" from="TempoTimer" to="." method="_on_tempo_timer_timeout"]
+[connection signal="body_entered" from="DestroyerArea" to="." method="_on_destroyer_area_body_entered"]
