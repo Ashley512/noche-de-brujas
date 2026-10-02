@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://blswfxcqpnf7t"]
+
+[ext_resource type="Script" uid="uid://bstsl7kpkvh35" path="res://Scenes/input_spawner.gd" id="1_mxj8v"]
+[ext_resource type="Texture2D" uid="uid://bltrn314b7ccf" path="res://icon.svg" id="1_rrvtm"]
+[ext_resource type="PackedScene" uid="uid://da77qlg7cfbw4" path="res://Scenes/input.tscn" id="2_isxe5"]
+
+[node name="InputSpawner" type="Sprite2D" unique_id=1327963035]
+texture = ExtResource("1_rrvtm")
+script = ExtResource("1_mxj8v")
+input = ExtResource("2_isxe5")
