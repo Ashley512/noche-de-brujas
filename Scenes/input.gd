@@ -12,13 +12,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var progress : float = get_progress_ratio() + drop_speed * delta
 	
+	if Input.is_action_just_pressed("ui_" + input_as_string):
+		print(progress)
+		
 	if progress > 1:
 		queue_free()
 	else:
 		set_progress_ratio(progress)
-	
-	if Input.is_action_just_pressed("ui_" + input_as_string):
-		print("asfd")
+
 
 enum INPUT_TYPE {
 	up,
