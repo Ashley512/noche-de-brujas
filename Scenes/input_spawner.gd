@@ -12,7 +12,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func spawn_input():
+func spawn_input(drop_speed):
 	var instanced_input = input.instantiate()
 	instanced_input.input_type = input_type
+	instanced_input.drop_speed = drop_speed
 	add_child(instanced_input)
