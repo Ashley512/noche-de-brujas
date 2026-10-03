@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cy1fq1ml7tsd1"]
+
+[ext_resource type="Texture2D" uid="uid://brslns7w7sj4t" path="res://Assets/WitchAssets/B_witch_charge.png" id="1_o0deq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scjaa"]
+atlas = ExtResource("1_o0deq")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khhv7"]
+atlas = ExtResource("1_o0deq")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvxco"]
+atlas = ExtResource("1_o0deq")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcp83"]
+atlas = ExtResource("1_o0deq")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgee7"]
+atlas = ExtResource("1_o0deq")
+region = Rect2(0, 192, 48, 48)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scjaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khhv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvxco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcp83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgee7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]

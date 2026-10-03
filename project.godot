@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Noche De Brujas"
-run/main_scene="uid://cv5pif1m8ltdg"
+run/main_scene="uid://b1lcsr33wt0r0"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
