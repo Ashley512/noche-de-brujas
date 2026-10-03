@@ -8,24 +8,20 @@
 [node name="Main" type="Node2D" unique_id=1135861443]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1866333603]
-scale = Vector2(3.627, 3.6)
 texture = ExtResource("1_jjvhh")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=252615777]
-repeat_size = Vector2(1600, 0)
+repeat_size = Vector2(320, 0)
 autoscroll = Vector2(20, 0)
-repeat_times = 3
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=976678620]
-position = Vector2(0, 200)
-scale = Vector2(5, 5)
 texture = ExtResource("2_kry3j")
 
 [node name="RhythmNode" parent="." unique_id=986718057 instance=ExtResource("1_jjgbg")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1242572756]
-position = Vector2(0, 175)
-scale = Vector2(5, 5)
+position = Vector2(0, 50)
 sprite_frames = ExtResource("2_bo1nx")
 autoplay = "default"
 frame_progress = 0.16566122
@@ -33,14 +29,15 @@ frame_progress = 0.16566122
 [node name="Control" type="Control" parent="." unique_id=1363508737]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -582.0
-offset_top = -326.0
-offset_right = 591.0
-offset_bottom = 351.0
+offset_left = -581.0
+offset_top = -344.0
+offset_right = 592.0
+offset_bottom = 333.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=189482917]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,3 +47,4 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0.08627451)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2134118481]
+zoom = Vector2(4, 4)

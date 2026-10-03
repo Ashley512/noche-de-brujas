@@ -26,7 +26,6 @@ autostart = true
 
 [node name="InputSpawns" type="Node2D" parent="." unique_id=991205742]
 position = Vector2(0, -275)
-scale = Vector2(2, 2)
 
 [node name="UpSpawner" parent="InputSpawns" unique_id=1071283595 instance=ExtResource("2_ky7fm")]
 position = Vector2(-75, 0)
